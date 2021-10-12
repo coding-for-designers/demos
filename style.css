@@ -1,0 +1,70 @@
+:root {
+  font-family: 'Arial', sans-serif;
+  --highlight-subtle: #FCDC69;
+  --highlight-bold: orange;
+}
+
+* {
+  font-weight: normal;
+}
+
+body {
+  font-size: calc(1em + 1vw);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+}
+
+main header {
+  margin: 2rem;
+}
+
+footer {
+  place-self: end;
+  margin-bottom: 4em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+img {
+  height: inherit;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-top: 1px solid black;
+  margin-top: 3rem;
+}
+
+/* Flexbox alignment for table rows  */
+li {
+  border-bottom: 1px solid black;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 1em;
+}
+
+a {
+  color: inherit;
+}
+
+.table a {
+  text-decoration: none;
+}
+
+.table a li:hover, .table a li:focus {
+  background-color: var(--highlight-subtle);
+}
+
+.table a:active li {
+  background-color: var(--highlight-bold);
+}

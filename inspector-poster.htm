@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position Experiments</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9eef0;
+    /* Margin at the bottom of the page to let the viewer scroll a little past your final element */
+    margin-bottom: 10rem;
+    /* When window is very small, break words to two lines */
+    word-break: break-word;
+  }
+
+  /* Make every element normal font weight, even if default is bold */
+  * {
+    font-weight: normal;
+  }
+
+  /* position classes. static is default */
+  .static {
+    position: static;
+  }
+
+  .fixed {
+    position: fixed;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  /* display classes */
+  .block {
+    display: block;
+  }
+
+  .inline {
+    display: inline;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  /* Sticky ovals */
+  .sticky {
+    position: sticky;
+    /* Margin-top defines the default position, before scrolling */
+    margin-top: 40vh;
+    /* Top defines position after scrolling. Replace with bottom, left, or right to choose a side to "stick" to */
+    top: 4vh;
+    /* This ensures the sticky elements are on top of all other elements on the z-axis */
+    z-index: 999;
+  }
+
+  /* style */
+  .oval {
+    background-color: orange;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  /* Gradient divs need fixed width and height */
+  .gradient {
+    width: 90vw;
+    height: 90vw;
+    background: radial-gradient(orange, transparent, transparent);
+    text-align: center;
+    display: grid;
+    align-content: center;
+    position: absolute;
+    /* margin-top: -4rem; */
+  }
+
+  /* Single column grid */
+  .grid-rows {
+    display: grid;
+    /* Outer border for parent div */
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    width: 50vw;
+    background: white;
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  /* Vertically align each row with padding */
+  .grid-rows div {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  /* Add divider lines to rows - border top only for divs following another div */
+  .grid-rows div+div {
+    border-top: 1px solid black;
+  }
+  </style>
+</head>
+
+<body>
+  <h1>Position & Display</h1>
+  <div class="flex sticky">
+    <div class="oval">Sticky</div>
+    <div class="oval">Sticky</div>
+    <div class="oval">Sticky</div>
+  </div>
+  <div class="oval">Not Sticky</div>
+  <!-- Notice how the gradient appears on top of the text with position absolute even though it is higher up in the document -->
+  <div class="gradient">Gradient</div>
+  <div class="grid-rows">
+    <div>Single</div>
+    <div>Column</div>
+    <div>Grid</div>
+    <div>position: fixed</div>
+  </div>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+  <p>This text exists to make sure the page is scrollable. That way, you can see the behavior of the sticky and fixed elements.</p>
+</body>
+
+</html>
