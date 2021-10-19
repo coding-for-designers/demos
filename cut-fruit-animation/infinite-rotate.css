@@ -1,0 +1,75 @@
+/* Global Styles & Variables */
+:root {
+  cursor: url(cursors/passionfruit.png), auto;
+  font-family: Courier, monospace;
+}
+
+/* Custom Cursors */
+img:hover {
+  cursor: url(cursors/mango3.png), auto;
+}
+
+img:nth-of-type(even):hover {
+  cursor: url(cursors/lychee.png), auto;
+}
+
+img:nth-of-type(odd):hover {
+  cursor: url(cursors/starfruit.png), auto;
+}
+
+img:nth-of-type(3n+0):hover {
+  cursor: url(cursors/pear.png), auto;
+}
+
+h1:hover {
+  cursor: url(cursors/kaki.png), auto;
+}
+
+p:hover {
+  cursor: url(cursors/mango.png), auto;
+}
+
+/* Rotating Side to side */
+.rotate {
+  width: 10em;
+  transition: 0.5s ease;
+}
+
+.rotate:active {
+  opacity: .1;
+  transition: 0.5s ease;
+}
+
+.rotate:hover, .rotate:focus {
+  animation: rotate 1.5s alternate infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Infinite Rotate Animation */
+.infinite-rotate {
+  text-align: center;
+  animation: infinite-rotate 25s linear infinite;
+}
+
+.infinite-rotate:hover, .infinite-rotate:focus {
+  animation-play-state: paused;
+}
+
+@keyframes infinite-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
